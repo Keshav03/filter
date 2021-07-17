@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Menu</h1>
+
+    <div class="buttonContainer">
+        <button class="button" onclick="changes(this)" name="btn1" ">Panel 1 </button>
+        <button class="button" onclick="changes(this)" name="btn2" >Panel 2 </button>
+        <button class="button" onclick="changes(this)" name="btn3" >Panel 3 </button>
+        <button class="button" onclick="changes(this)" name="btn4" >Panel 4 </button>
+    </div>
+    <div class="container">
+        <div class="subContainer1 " id="p1">
+
+
+        </div>
+
+        <div class="subContainer2 displayNone" id="p2">
+
+            
+        </div>
+
+        <div class="subContainer3 displayNone" id="p3">
+
+            
+        </div>
+
+        <div class="subContainer4 displayNone" id="p4">
+
+            
+        </div>
+
+
+    </div>
+
+    <script>
+        function changes(button){
+           btn = button.getAttribute("name")
+            panel1 = document.getElementById('p1')
+            panel2 = document.getElementById('p2')
+            panel3 = document.getElementById('p3')
+            panel4 = document.getElementById('p4')
+
+            if (btn =="btn1"){
+                panel1.classList.remove("displayNone")
+                panel2.classList.add("displayNone")
+                panel3.classList.add("displayNone")
+                panel4.classList.add("displayNone")
+            }
+            else if (btn == "btn2"){
+                panel1.classList.add("displayNone")
+                panel2.classList.remove("displayNone")
+                panel3.classList.add("displayNone")
+                panel4.classList.add("displayNone")
+            }
+            else if (btn == "btn3"){
+                panel1.classList.add("displayNone")
+                panel2.classList.add("displayNone")
+                panel3.classList.remove("displayNone")
+                panel4.classList.add("displayNone")
+            }
+            else if (btn == "btn4"){
+                panel1.classList.add("displayNone")
+                panel2.classList.add("displayNone")
+                panel3.classList.add("displayNone")
+                panel4.classList.remove("displayNone")
+            }
+        
+            }
+
+    </script>
+
+
+
+</body>
+</html>
